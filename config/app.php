@@ -13,8 +13,8 @@ return [
     */
 
     'name'        => env('APP_NAME', 'Package Trends'),
-    'title'       => 'Package Trends: Compare Packagist, PyPI, Hex, npm & WordPress package downloads',
-    'description' => 'A quick way to compare package downloads across languages. Compare Packagist, PyPI, Hex, npm & WordPress package download statistics.',
+    'title'       => 'Package Trends: Compare Packagist, PyPI, Hex, npm, NuGet & WordPress package downloads',
+    'description' => 'A quick way to compare package downloads across languages. Compare Packagist, PyPI, Hex, npm, NuGet & WordPress package download statistics.',
 
     'version' => file_exists($versionPath = base_path('.version'))
         ? trim(file_get_contents($versionPath))
@@ -31,6 +31,7 @@ return [
         IronGate\Pkgtrends\Repositories\PyPIRepository::class,
         IronGate\Pkgtrends\Repositories\NpmRepository::class,
         IronGate\Pkgtrends\Repositories\HexRepository::class,
+        IronGate\Pkgtrends\Repositories\NuGetRepository::class,
         IronGate\Pkgtrends\Repositories\WordPressRepository::class,
     ],
 
